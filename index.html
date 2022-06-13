@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Starbucks Landing Page</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="logo.png" class="logo"></a>
+        </header>
+        
+        <div class="content">
+            <div class="textBox">
+                <h2>Não é só café <br> Isso é <span>Starbucks</span></h2>
+                <p>Começando com uma escolha clássica, o Vanilla Latte é simples, mas delicioso. Composto por uma dose de espresso, leite vaporizado e calda de baunilha, é uma das escolhas mais descomplicadas e indiscutivelmente o melhor café quente!</p>
+                <a href="#">Saíba mais</a>
+            </div>
+            <div class="imgBox">
+                <img src="img1.png" class="starbucks">
+            </div>
+        </div>
+        <ul class="thumb">
+            <li><img src="thumb1.png" onclick="imgSlider('img1.png');changeCircleColor('#017143')"></li>
+            <li><img src="thumb2.png" onclick="imgSlider('img2.png');changeCircleColor('#eb7495')"></li>
+            <li><img src="thumb3.png" onclick="imgSlider('img3.png');changeCircleColor('#d752b1')"></li>
+        </ul>
+        <ul class="sci">
+            <li><a href="#"><img src="facebook.png"></a></li>
+            <li><a href="#"><img src="twitter.png"></a></li>
+            <li><a href="#"><img src="instagram.png"></a></li>
+        </ul>
+    </section>
+
+    <script type="text/javascript">
+        function imgSlider(anything){
+            document.querySelector('.starbucks').src = anything
+        }
+
+        function changeCircleColor(color){
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    </script>
+
+</body>
+</html>
